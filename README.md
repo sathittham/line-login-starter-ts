@@ -1,6 +1,8 @@
-# LINE Login App
+# LINE Login v2.1 Demo App
 
-This project is a web application that implements LINE Login v2.1 using Node.js (TypeScript) for the backend and React with Vite for the frontend. The application consists of a login page (with the official LINE Login button and responsive design), a success page, and an error page.
+This project is a full-stack web application demonstrating the LINE Login v2.1 workflow. It features a Node.js (TypeScript) backend and a React (Vite, TypeScript) frontend styled with Tailwind CSS.
+
+The application provides a complete, responsive user flow including a login page with the official LINE Login button, a success page for authenticated users, and an error page.
 
 ## Project Structure
 
