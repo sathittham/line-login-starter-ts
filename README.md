@@ -2,7 +2,11 @@
 
 This project is a full-stack web application demonstrating the LINE Login v2.1 workflow. It features a Node.js (TypeScript) backend and a React (Vite, TypeScript) frontend styled with Tailwind CSS.
 
-The application provides a complete, responsive user flow including a login page with the official LINE Login button, a success page for authenticated users, and an error page.
+The application provides a complete, responsive user flow including:
+- A login page with the official LINE Login button (guideline compliant and responsive)
+- A success page displaying authenticated user information (name and profile photo)
+- An error page with a link to retry login
+- Logout functionality
 
 ## Project Structure
 
@@ -17,24 +21,28 @@ line-login-2.1-starter-2025
 │   │   │   └── authRoutes.ts
 │   │   └── types
 │   │       └── index.ts
+│   ├── constants
+│   │   └── lineApiUrls.ts
 │   ├── package.json
-│   └── tsconfig.json
+│   ├── tsconfig.json
+│   └── .env.example
 ├── frontend
 │   ├── src
 │   │   ├── main.tsx
 │   │   ├── App.tsx
 │   │   ├── pages
 │   │   │   ├── Login.tsx
-│   │   │   ├── Success.tsx
-│   │   │   └── Error.tsx
-│   │   └── types
-│   │       └── index.ts
+│   │   │   ├── Main.tsx
+│   │   │   ├── Error.tsx
+│   │   │   └── Logout.tsx
 │   ├── assets
 │   │   ├── btn_login_base.png
 │   │   ├── btn_login_hover.png
 │   │   └── btn_login_press.png
+│   ├── index.css
 │   ├── package.json
-│   └── tsconfig.json
+│   ├── tsconfig.json
+│   └── vite.config.ts
 └── README.md
 ```
 
@@ -55,9 +63,14 @@ line-login-2.1-starter-2025
    ```
    npm install
    ```
-3. Start the backend server:
+3. Create your environment file (see `.env.example` for required variables):
    ```
-   npm start
+   cp .env.example .env.local
+   # Edit .env.local with your LINE credentials and redirect URI
+   ```
+4. Start the backend server:
+   ```
+   npm run dev
    ```
 
 ### Frontend Setup
@@ -77,11 +90,12 @@ line-login-2.1-starter-2025
 
 ### Usage
 
-- Open your browser and navigate to `http://localhost:3000` to access the application.
+- Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
 - Use the login page to authenticate with LINE (the button follows [LINE's official guidelines](https://terms2.line.me/LINE_Developers_Guidelines_for_Login_Button)).
-- After successful login, you will be redirected to the success page.
+- After successful login, you will be redirected to the main page showing your LINE profile.
 - If there is an error during the login process, you will be redirected to the error page.
+- You can logout and return to the login page.
 
 ## License
 
-This project is licensed under the
+This project is licensed under the MIT license.
