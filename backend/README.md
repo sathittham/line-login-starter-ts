@@ -47,8 +47,8 @@ LINE_CLIENT_SECRET=your_line_client_secret
 LINE_REDIRECT_URI=http://localhost:5000/api/auth/line/callback
 SESSION_SECRET=a_long_random_string_for_securing_sessions
 PORT=5000
-FRONTEND_SUCCESS_URL=http://localhost:3000/success
-FRONTEND_ERROR_URL=http://localhost:3000/error
+FRONTEND_SUCCESS_URL=http://localhost:5173/success
+FRONTEND_ERROR_URL=http://localhost:5173/error
 ```
 
 ## Scripts

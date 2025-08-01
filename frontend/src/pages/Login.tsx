@@ -10,30 +10,33 @@ const Login: React.FC = () => {
     <div
       className="flex min-h-screen w-full flex-col items-center justify-center bg-white text-center"
     >
-      <h1 className="mb-8 text-2xl font-bold text-black">Login with LINE</h1>
       <a
         href={LINE_LOGIN_URL}
         className="group relative inline-block rounded-lg bg-white p-3"
+        style={{ width: 'auto', height: '40px' }} // Ensure container height matches image
       >
         {/* Base image */}
         <img
           src={btnWide}
           alt="Log in with LINE"
-          className="block h-10 w-auto"
+          className="absolute top-0 left-0 h-10 w-auto group-hover:hidden group-active:hidden"
+          style={{ zIndex: 1 }}
         />
-        {/* Hover image - shown on hover, hidden otherwise */}
+        {/* Hover image */}
         <img
           src={btnHover}
           alt=""
-          className="absolute top-3 left-3 hidden h-10 w-auto group-hover:block"
+          className="absolute top-0 left-0 h-10 w-auto hidden group-hover:block group-active:hidden"
+          style={{ zIndex: 2 }}
         />
-        {/* Active image - shown on active, hidden otherwise */}
+        {/* Active image */}
         <img
           src={btnPress}
           alt=""
-          className="absolute top-3 left-3 hidden h-10 w-auto group-active:block"
+          className="absolute top-0 left-0 h-10 w-auto hidden group-active:block"
+          style={{ zIndex: 3 }}
         />
-      </a>
+</a>
     </div>
   );
 };
