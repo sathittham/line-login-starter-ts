@@ -90,7 +90,7 @@ line-login-2.1-starter-2025
 
 ### Usage
 
-- Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+- Open your browser and navigate to `http://localhost:3000` (or the port shown in your terminal).
 - Use the login page to authenticate with LINE (the button follows [LINE's official guidelines](https://terms2.line.me/LINE_Developers_Guidelines_for_Login_Button)).
 - After successful login, you will be redirected to the main page showing your LINE profile.
 - If there is an error during the login process, you will be redirected to the error page.
